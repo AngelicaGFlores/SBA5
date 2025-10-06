@@ -8,14 +8,23 @@
 		<script src="script.js" defer></script>
 	</head>
 	<body>
+		<h1>Create a New Post</h1>
 		<section id="section1">
 			<form action="dynamic-cart">
-				<h1 id="title">title</h1>
-				<textarea name="textarea" id="textarea">text here </textarea>
-				<button id="sub-btn">submit</button>
+				<label for="title">Past title</label>
+				<input type="text" id="title" name="title" required maxlength="38">
+				<span class="error" id="title-err"></span>
+
+				<label for="content">Post Content</label>
+				<textarea name="content" name="content" required maxlength="258" id=""></textarea>
+				<span class="error" id="content-err"></span>
+
+				<button type="submit">Add Post</button>
 			</form>
 		</section>
 
-		<section id="section2">dsiplay</section>
+		<h2>Posts</h2>
+		<div id="posts-list"></div>
+		
 	</body>
 </html>
