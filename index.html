@@ -4,19 +4,20 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
-		<link rel="stylesheet" href="styles.css" />
 		<script src="script.js" defer></script>
+		<link rel="stylesheet" href="styles.css"/>
+		<title> Create your Post</title>
 	</head>
 	<body>
 		<h1>Create a New Post</h1>
 		<section id="section1">
-			<form action="dynamic-cart">
-				<label for="title">Past title</label>
-				<input type="text" id="title" name="title" required maxlength="38">
+			<form action="dynamic-cart" id="dynamic-cart">
+				<label class="label" for="title">Post Title</label>
+				<input type="text" id="title" name="title" placeholder="Enter title here.." minlength="5" maxlength="38" required>
 				<span class="error" id="title-err"></span>
 
-				<label for="content">Post Content</label>
-				<textarea name="content" name="content" required maxlength="258" id=""></textarea>
+				<label class="label" for="content">Post Content</label>
+				<textarea name="content" name="content" required maxlength="258" id="content"></textarea>
 				<span class="error" id="content-err"></span>
 
 				<button type="submit">Add Post</button>
@@ -24,7 +25,10 @@
 		</section>
 
 		<h2>Posts</h2>
-		<div id="posts-list"></div>
+		<div id="posts-list">
+			<ul> Edit
+			</ul>
+		</div>
 		
 	</body>
 </html>
